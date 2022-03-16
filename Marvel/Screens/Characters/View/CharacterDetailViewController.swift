@@ -9,8 +9,11 @@
 import UIKit
 
 class CharacterDetailViewController: UIViewController {
-    
-    var characterCellViewModel: CharacterCellViewModel?
+    lazy var viewModel = {
+        CharacterDetailViewModel()
+    }()
+
+    var characterId: Int?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -19,35 +22,35 @@ class CharacterDetailViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = characterCellViewModel?.name
         imageView.alpha = 0.0
-        
-        let imageCompletionClosure = { ( imageData: NSData ) -> Void in
-            
+
+        viewModel.getCharacterDetail(with: characterId!)
+
+        // Reload View closure
+        viewModel.reloadView = { [weak self] in
             DispatchQueue.main.async {
+                let imageCompletionClosure = { ( imageData: NSData ) -> Void in
+                            
+                    DispatchQueue.main.async {
+                                
+                        UIView.animate(withDuration: 1.0, animations: {
+                            self!.imageView.alpha = 1.0
+                            self!.imageView?.image = UIImage(data: imageData as Data)
+                            self!.view.setNeedsDisplay()
+                        })
+                                
+                        self!.activitySpinner.stopAnimating()
+                    }
+                                
+                }
+                self!.activitySpinner.startAnimating()
                 
-                UIView.animate(withDuration: 1.0, animations: {
-                    self.imageView.alpha = 1.0
-                    self.imageView?.image = UIImage(data: imageData as Data)
-                    self.view.setNeedsDisplay()
-                })
-                
-                self.activitySpinner.stopAnimating()
-                    
+                self!.title = self!.viewModel.characterCellViewModel!.name
+                self!.titleLabel.text = self!.viewModel.characterCellViewModel!.name
+                self!.descriptionLabel.text = self!.viewModel.characterCellViewModel?.description
+                self!.viewModel.characterCellViewModel?.download(completionHanlder: imageCompletionClosure)
             }
-                
         }
-        activitySpinner.startAnimating()
-        
-        titleLabel.text = characterCellViewModel?.name
-        descriptionLabel.text = characterCellViewModel?.description
-            
-        characterCellViewModel?.download(completionHanlder: imageCompletionClosure)
-            
-    }
-        
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
     }
      
     override func didReceiveMemoryWarning() {

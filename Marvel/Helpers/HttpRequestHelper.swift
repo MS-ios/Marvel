@@ -20,9 +20,7 @@ class HttpRequestHelper {
             print("Error: cannot create URLCompontents")
             return
         }
-//        components.queryItems = params.map { key, value in
-//            URLQueryItem(name: key, value: value)
-//        }
+        
         components.queryItems = params.keys.map { key in
             URLQueryItem(name: key, value: params[key]?.description)
         }

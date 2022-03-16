@@ -45,11 +45,12 @@ class CharactersViewModel: NSObject {
     }
     
     func createCellModel(character: Character) -> CharacterCellViewModel {
+        let id = character.id!
         let name = character.name!
         let description = character.description ?? ""
         let poster = character.thumbnail!
         
-        return CharacterCellViewModel(name: name, description: description, poster: poster)
+        return CharacterCellViewModel(id: id, name: name, description: description, poster: poster)
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> CharacterCellViewModel {

@@ -55,13 +55,10 @@ extension CharactersViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destinationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "characterDetailVC") as! CharacterDetailViewController
-        // #2 - The ViewModel is the app's de facto data source.
-        // The ViewModel data for the currently-selected table
-        // view cell representing a Messier object is passed to
-        // a detail view controller via a segue.
-        destinationViewController.characterCellViewModel = viewModel.getCellViewModel(at: indexPath)
-        self.navigationController?.show(destinationViewController, sender: nil)
+        let characterDetailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "characterDetailVC") as! CharacterDetailViewController
+        characterDetailViewController.characterId = (viewModel.getCellViewModel(at: indexPath)).id
+        //destinationViewController.characterCellViewModel = viewModel.getCellViewModel(at: indexPath)
+        self.navigationController?.show(characterDetailViewController, sender: nil)
     }
 }
 

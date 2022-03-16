@@ -13,6 +13,4 @@ struct ApiConstants {
     static let apiKey = "4661276b35f4f309892516c5ca783fad"
     static let ts = "1"
     static let baseUrl = URL(string: "https://gateway.marvel.com:443/v1/public")!
-    //static let baseUrl = URL(string: "https://*.marvel.com/apigateway")!
-
 }

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Combine
-import UIKit.UIImage
 
 /*
  - Define a closure TYPE for updating a UIImageView once an image downloads.
@@ -17,9 +15,10 @@ import UIKit.UIImage
 public typealias ImageDownloadCompletionClosure = (_ imageData: NSData ) -> Void
 
 struct CharacterCellViewModel {
+    let id: Int
     var name: String
     var description: String
-    let poster: Thumbnail//AnyPublisher<UIImage?, Never>
+    let poster: Thumbnail
 
     func download(completionHanlder: @escaping ImageDownloadCompletionClosure){
         

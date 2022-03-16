@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506CB04D27E1E2E400BD69D8 /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506CB04C27E1E2E400BD69D8 /* CharacterDetailViewModel.swift */; };
 		50904AF527DA0BA0006195F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50904AF427DA0BA0006195F7 /* AppDelegate.swift */; };
 		50904AF727DA0BA0006195F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50904AF627DA0BA0006195F7 /* SceneDelegate.swift */; };
 		50904AF927DA0BA0006195F7 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50904AF827DA0BA0006195F7 /* CharactersViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		506CB04C27E1E2E400BD69D8 /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		50904AF127DA0BA0006195F7 /* Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50904AF427DA0BA0006195F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50904AF627DA0BA0006195F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				50904B1C27DA31DD006195F7 /* CharacterCellViewModel.swift */,
 				50904B1E27DA320B006195F7 /* CharactersViewModel.swift */,
+				506CB04C27E1E2E400BD69D8 /* CharacterDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				50904AF727DA0BA0006195F7 /* SceneDelegate.swift in Sources */,
 				50904B2527DBC9A7006195F7 /* HashProvider.swift in Sources */,
 				50904AF927DA0BA0006195F7 /* CharactersViewController.swift in Sources */,
+				506CB04D27E1E2E400BD69D8 /* CharacterDetailViewModel.swift in Sources */,
 				50904B1227DA2D7D006195F7 /* CharactersService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

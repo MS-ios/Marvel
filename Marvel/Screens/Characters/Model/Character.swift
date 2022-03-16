@@ -21,6 +21,7 @@ struct Character: Codable {
     }
 }
 
+// MARK: - CharactersList
 struct CharactersList: Decodable {
     var results: [Character]
 
