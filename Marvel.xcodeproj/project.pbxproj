@@ -59,6 +59,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		506CB04E27E1EB8100BD69D8 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				506CB04F27E1EBBA00BD69D8 /* View */,
+				506CB05027E1EBC700BD69D8 /* ViewModel */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		506CB04F27E1EBBA00BD69D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50904B2227DBBD91006195F7 /* CharacterDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		506CB05027E1EBC700BD69D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				506CB04C27E1E2E400BD69D8 /* CharacterDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		50904AE827DA0BA0006195F7 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				50904B0D27DA2C0A006195F7 /* Characters */,
+				506CB04E27E1EB8100BD69D8 /* CharacterDetail */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -140,7 +166,6 @@
 			children = (
 				50904B1727DA30ED006195F7 /* Cell */,
 				50904AF827DA0BA0006195F7 /* CharactersViewController.swift */,
-				50904B2227DBBD91006195F7 /* CharacterDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,7 +175,6 @@
 			children = (
 				50904B1C27DA31DD006195F7 /* CharacterCellViewModel.swift */,
 				50904B1E27DA320B006195F7 /* CharactersViewModel.swift */,
-				506CB04C27E1E2E400BD69D8 /* CharacterDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
