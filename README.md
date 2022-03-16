@@ -30,7 +30,7 @@ This app has been developed using MVVM architectural pattern, which is a combina
 - **Clone:** First, clone the repository with the 'clone' command.
 
 ```sh
-$ git clone git@github.com:drogel/Marvel.git
+$ git clone git@github.com:MS-ios/Marvel.git
 ```
 
 - **Marvel API keys:** Set your Marvel API keys as constants in ApiConstants file. Go to Marvel -> Services -> ApiConstants.swift file, and edit _privateKey_ and _apiKey_ .
