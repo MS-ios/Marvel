@@ -17,6 +17,11 @@ This project has been built using:
 
 - **Character detail:** displays a picture of a character and its full description.
 
+![Simulator Screen Shot - iPhone SE (2nd generation) - 2022-03-16 at 16 16 03](https://user-images.githubusercontent.com/54179274/158573085-dbfd1bd7-88d8-4f54-8f27-7457b946e546.png)
+
+![Simulator Screen Shot - iPhone SE (2nd generation) - 2022-03-16 at 16 16 15](https://user-images.githubusercontent.com/54179274/158573141-9bef9824-82d1-4463-b987-d3e93b23181a.png)
+
+
 # Architecture
 This app has been developed using MVVM architectural pattern, which is a combination of the Model-View-ViewModel architecture. In this implementation, the binding between the Views and the ViewModels is done via closures. The app has three major layers:
 
